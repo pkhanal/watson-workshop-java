@@ -1,1 +1,1 @@
-# watson-workshop-nyc
+# Watson Workshop
