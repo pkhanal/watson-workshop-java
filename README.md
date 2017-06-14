@@ -47,7 +47,7 @@ mvn archetype:generate \
 
 ![Import Workspace](/images/import-workspace.png?raw=true "Import Workspace")
 
-#### Installation
+#### Maven Dependency
 ```
 <dependency>
 	<groupId>com.ibm.watson.developer_cloud</groupId>
