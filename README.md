@@ -41,7 +41,13 @@ mvn archetype:generate \
 
 ### Let's build a chatbot using Conversation Service
 
-#### Installation
+#### Log in to bluemix, create the service, and launch the visual tool
+
+#### Import a workspace. You can download the [workspace json file](/data/watson-resource-finder-conversation-workspace.json) available in the repository.
+
+![Import Workspace](/images/import-workspace.png?raw=true "Import Workspace")
+
+#### Maven Dependency
 ```
 <dependency>
 	<groupId>com.ibm.watson.developer_cloud</groupId>
