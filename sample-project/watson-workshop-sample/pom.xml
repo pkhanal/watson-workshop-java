@@ -23,6 +23,16 @@
       <version>3.8.0</version>
     </dependency>
     <dependency>
+      <groupId>com.ibm.watson.developer_cloud</groupId>
+      <artifactId>language-translator</artifactId>
+      <version>3.8.0</version>
+    </dependency>
+    <dependency>
+      <groupId>com.ibm.watson.developer_cloud</groupId>
+      <artifactId>text-to-speech</artifactId>
+      <version>3.8.0</version>
+    </dependency>
+    <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <version>3.8.1</version>

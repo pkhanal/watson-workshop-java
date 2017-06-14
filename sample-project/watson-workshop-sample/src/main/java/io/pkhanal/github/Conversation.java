@@ -55,7 +55,7 @@ public class Conversation
 
 
     private static void writeBotResponseToConsole(String  message) {
-        System.out.print(ANSI_GREEN + "Lisa: " + ANSI_RESET);
+        System.out.print(ANSI_YELLOW + "Lisa: " + ANSI_RESET);
         System.out.print(ANSI_YELLOW + message + ANSI_RESET);
         System.out.println();
     }
@@ -65,7 +65,7 @@ public class Conversation
     }
 
     private static String readUserInput() {
-        System.out.print(ANSI_RED + "Me: " + ANSI_RESET);
+        System.out.print(ANSI_GREEN + "Me: " + ANSI_RESET);
         return scanner.nextLine();
     }
 }
