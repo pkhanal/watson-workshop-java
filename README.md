@@ -6,6 +6,8 @@ We will dive into Java APIs for following watson services:
 - [Language Translator]()
 - [Text to Speech]()
 
+We will also explore the [Reactive API](https://github.com/watson-developer-cloud/java-sdk#introduce-reactive-api-call-for-v301) introduced since version **v3.0.1** through examples.
+
 ### Getting the Service Credentials
 You will need the username and password credentials for each service. Service credentials are different from your Bluemix account username and password.
 
