@@ -45,6 +45,8 @@ mvn archetype:generate \
 
 #### Import a workspace. You can download the [workspace json file](/data/watson-resource-finder-conversation-workspace.json) available in the repository.
 
+![Import Workspace](/images/import-workspace.png?raw=true "Import Workspace")
+
 #### Installation
 ```
 <dependency>
