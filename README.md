@@ -22,7 +22,7 @@ mvn archetype:generate \
 
 #### Import the project into your IDE of choice
 
-### Let's build a simple chatbot using Conversation Service
+### Let's build a chatbot using Conversation Service
 
 #### Getting the Service Credentials
 You will need the username and password credentials for Conversation service. Service credentials are different from your Bluemix account username and password.
