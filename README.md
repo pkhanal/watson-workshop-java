@@ -6,6 +6,23 @@ We will dive into Java APIs for following watson services:
 - [Language Translator]()
 - [Text to Speech]()
 
+### Getting the Service Credentials
+You will need the username and password credentials for each service. Service credentials are different from your Bluemix account username and password.
+
+To get your service credentials, follow these steps:
+
+- Log in to Bluemix at https://bluemix.net.
+
+- Create an instance of the service:
+
+  - In the Bluemix Catalog, select the service you want to use.
+  - Under Add Service, type a unique name for the service instance in the Service name field. For example, type my-service-name. Leave the default values for the other options.
+  - Click **Create**.
+  
+- Copy your credentials:
+  - On the left side of the page, click Service Credentials to view your service credentials.
+  - Copy username and password to your project.
+
 #### Prerequisites
 - JDK 7 or higher
 - Maven 3.0 or higher
@@ -23,23 +40,6 @@ mvn archetype:generate \
 #### Import the project into your IDE of choice
 
 ### Let's build a chatbot using Conversation Service
-
-#### Getting the Service Credentials
-You will need the username and password credentials for Conversation service. Service credentials are different from your Bluemix account username and password.
-
-To get your service credentials, follow these steps:
-
-- Log in to Bluemix at https://bluemix.net.
-
-- Create an instance of the service:
-
-  - In the Bluemix Catalog, select the service you want to use.
-  - Under Add Service, type a unique name for the service instance in the Service name field. For example, type my-service-name. Leave the default values for the other options.
-  - Click **Create**.
-  
-- Copy your credentials:
-  - On the left side of the page, click Service Credentials to view your service credentials.
-  - Copy username and password to your project.
 
 #### Installation
 ```
