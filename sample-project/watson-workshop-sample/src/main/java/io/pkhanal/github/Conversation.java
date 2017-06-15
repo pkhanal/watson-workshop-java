@@ -35,10 +35,7 @@ public class Conversation
                 prop.getProperty("CONVERSATION_USERNAME"),
                 prop.getProperty("CONVERSATION_PASSWORD"));
 
-        // context to retain the conversation state
-        // application needs to maintain the conversation context and
-        // pass in the context in subsequent conversation
-        // start with empty context
+        // conversation context
         Map<String, Object> ctx = new HashMap<>();
 
         MessageRequest messageRequest = createChatMessage("", ctx);
