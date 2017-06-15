@@ -124,7 +124,7 @@ Copy sample.config.properties and rename the copy to config.properties. Add the 
 ### Run from command line
 
 #### Conversation
-mvn exec:java@ReactiveTranslationTextToConversation
+mvn exec:java@Conversation
 
 #### Language Translation from English to French and then apply Text to Speech
 mvn exec:java@ReactiveTranslationTextToSpeech -Dexec.args="'good bye'"
