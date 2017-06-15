@@ -113,3 +113,18 @@ You can find the full source code in [ReactiveTranslatorAndTextToSpeech.java](ht
 
 This is a smiple example and I would say we explored only the tip of iceberg through this example. With Reactive API, it is easier to combine, compose and execute asynchronous calls to create a complex asynchronous system. Imagine a scenario where you want to make three different asynchronous service calles in parallel and want to move to immediately move to next stage regardless service gives you the result first. Or say you want to combine results of multiple service calls before moving onto next service call. I would recomment looking into the online resources on CompletableFuture and how it can be leveraged to build asynchronous system.
 
+
+## Sample Project
+The [sample project](/sample-project/watson-workshop-sample/) for this workshop is available alonside this repository. You can import the project in your IDE and run them.
+
+### Setup
+Copy sample.config.properties and rename the copy to config.properties. Add the service crendentials for Conversation, Language Translator & Text to Speech services.
+
+### Run from command line
+
+#### Conversation
+mvn exec:java@ReactiveTranslationTextToConversation
+
+#### Language Translation from English to French and then apply Text to Speech
+mvn exec:java@ReactiveTranslationTextToSpeech -Dexec.args="'good bye'"
+
