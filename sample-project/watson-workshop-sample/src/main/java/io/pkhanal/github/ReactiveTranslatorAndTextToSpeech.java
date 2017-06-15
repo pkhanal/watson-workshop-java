@@ -18,6 +18,15 @@ public class ReactiveTranslatorAndTextToSpeech
 {
     public static void main( String[] args ) throws Exception
     {
+        // read arg that is used for translation, default is hello
+        String text = "hello";
+
+        if (args.length > 0) {
+            text = args[0];
+        }
+
+        System.out.println("Text to translate: " + text);
+
         Properties prop = new Properties();
         prop.load(new FileInputStream("config.properties"));
 
@@ -28,7 +37,7 @@ public class ReactiveTranslatorAndTextToSpeech
         tts.setUsernameAndPassword(prop.getProperty("TTS_USERNAME"), prop.getProperty("TTS_PASSWORD"));
 
         translator
-                .translate("hello", Language.ENGLISH, Language.FRENCH)
+                .translate(text, Language.ENGLISH, Language.FRENCH)
                 .rx()
                 .thenApply(translationResult -> translationResult.getFirstTranslation())
                 .thenApply(translation -> tts.synthesize(translation, Voice.FR_RENEE, AudioFormat.WAV).rx())
