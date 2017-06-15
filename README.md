@@ -26,6 +26,7 @@ To get your service credentials, follow these steps:
 #### Prerequisites
 - JDK 7 or higher
 - Maven 3.0 or higher
+  - for running project from command line as discussed in later section, we will need version > 3.3.1
 
 #### Generate a maven project
 ```
