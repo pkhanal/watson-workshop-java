@@ -123,6 +123,8 @@ Copy sample.config.properties and rename the copy to config.properties. Add the 
 
 ### Run from command line
 
+mvn clean package
+
 #### Conversation
 mvn exec:java@Conversation
 
