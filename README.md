@@ -86,7 +86,7 @@ You can find the full source code in [Conversation.java](https://github.com/pkha
 
 
 ## Go Reactive!
-Often, we will run into a situation where we are leveraging multiple services in our application for cognitive capability. As of **June 14 2017**, there are [19 cognitive services](https://www.ibm.com/watson/developercloud/services-catalog.html) available in IBM Watson Platform. With this microservices based offerings, it is highly likely that you will be using more than one services in your application. It often requires you two combine / chain multiple services to get the result. That's when the Reactive API proves handy. It's functional approach to asynchronous programming helps developer to chain / combine multiple service calls in a reactive fashion.
+Often, we will run into a situation where we are leveraging multiple services in our application for cognitive capability. As of **June 14 2017**, there are [12 cognitive services](https://www.ibm.com/watson/developercloud/services-catalog.html) available in IBM Watson Platform. With this microservices based offerings, it is highly likely that you will be using more than one services in your application. It often requires you two combine / chain multiple services to get the result. That's when the Reactive API proves handy. It's functional approach to asynchronous programming helps developer to chain / combine multiple service calls in a reactive fashion.
 
 Since v3.0.1, each Service(TextToSpeech, LanguageTranslator, SpeechToText...) API has ``.rx()`` method that returns ``CompletableFuture``. ``CompletableFuture`` provides powerful APIs to build asynchronous system.
 
