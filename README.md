@@ -59,4 +59,30 @@ You can download the [workspace json file](/data/watson-resource-finder-conversa
 </dependency>
 ```
 
+### Go Reactive!
+Often, we will run into a situation where we are leveraging multiple services in our application for cognitive capability. As of **June 14 2017**, there are [19 cognitive services](https://www.ibm.com/watson/developercloud/services-catalog.html) available in IBM Watson Platform. With this microservices based offerings, it is highly likely that you will be using more than one services in your application. It often requires you two combine / chain multiple services to get the result. That's when the Reactive API proves handy. It's functional approach to asynchronous programming helps developer to chain / combine multiple service calls in a reactive fashion.
+
+Each Service class (TextToSpeech, LanguageTranslator, SpeechToText...) API now has ``.rx()`` method that returns <strong>``CompletableFuture``</strong>. ``CompletableFuture`` provides powerful APIs to build asynchronous system.
+
+For example, let's say you are trying to translate text from one language to another and then apply speech to text service to the translated text.
+
+```
+...
+
+LanguageTranslator translator = new LanguageTranslator();
+translator.setUsernameAndPassword("<username>", "<password>");
+
+TextToSpeech tts = new TextToSpeech();
+tts.setUsernameAndPassword("<username>", "<password>");
+
+translator
+  .translate("hello", Language.ENGLISH, Language.FRENCH)
+  .rx()
+  .thenApply(translationResult -> translationResult.getFirstTranslation())
+  .thenApply(translation -> tts.synthesize(translation, Voice.FR_RENEE, AudioFormat.WAV).rx())
+  .thenAccept(App::processSpeechSynthesis);
+  
+...
+```
+This is a smiple example and I would say we explored only the tip of iceberg through this example. With Reactive API, it is easier to combine, compose and execute asynchronous calls to create a complex asynchronous system. Imagine a scenario where you want to make three different asynchronous service calles in parallel and want to move to immediately move to next stage regardless service gives you the result first. Or say you want to combine results of multiple service calls before moving onto next service call. I would recomment looking into the online resources on CompletableFuture and how it can be leveraged to build asynchronous system.
 
