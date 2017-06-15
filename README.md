@@ -45,7 +45,8 @@ mvn archetype:generate \
 
 #### Log in to bluemix, create the service, and launch the visual tool
 
-#### Import a workspace. You can download the [workspace json file](/data/watson-resource-finder-conversation-workspace.json) available in the repository.
+#### Import conversation workspace 
+You can download the [workspace json file](/data/watson-resource-finder-conversation-workspace.json) available in the repository. The sample workspace can be used to create a chabot to find documentation for watson services. You can import workspace from the visual tool by clicking the icon marked in the image below.
 
 ![Import Workspace](/images/import-workspace.png?raw=true "Import Workspace")
 
@@ -57,3 +58,5 @@ mvn archetype:generate \
 	<version>3.8.0</version>
 </dependency>
 ```
+
+
